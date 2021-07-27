@@ -35,4 +35,4 @@ Route::middleware('auth') // autenticazione
 
 Route::get('{any?}', function () {
     return view('guest.home'); 
-})->where('any', '.*');
+})->where('any', '.*')->name('home');
