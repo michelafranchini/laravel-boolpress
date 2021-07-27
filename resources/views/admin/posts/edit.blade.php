@@ -14,6 +14,7 @@
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+
             <div class="form-group">
                 <label for="content">Testo</label>
                 <textarea class="form-control @error('content') is-invalid @enderror" id="content" rows="6" name="content" placeholder="Inserisci il testo dell'articolo">{{ old('content', $post->content) }}</textarea>
@@ -21,6 +22,17 @@
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+
+            <div class="form-group">
+                <label for="category_id">Categoria</label>
+                <select class="form-control" name="category_id" id="category_id">
+                    <option value="">Scegli una categoria</option>
+                    @foreach ($categories as $category)
+                        <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Salva</button>
             <a class="btn btn-secondary ml-2" href="{{ route('admin.posts.index') }}">Elenco Post</a>
         </form>
