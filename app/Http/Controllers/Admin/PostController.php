@@ -13,7 +13,7 @@ class PostController extends Controller
     private $postValidationArray = [
         'title' => 'required|max:255',
         'content' => 'required', 
-        'category_id' => 'nullable|exists:categories, id'
+        'category_id' => 'nullable|exists:categories,id'
     ];
 
     private function generateSlug($data) {
@@ -70,7 +70,7 @@ class PostController extends Controller
         $data = $request->all();
         
         $request->validate($this->postValidationArray);
-
+        //dd($data); 
         // creazione e salvataggio nuova istanza di classe Post
         $newPost = new Post();
 

@@ -24,11 +24,11 @@
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->slug }}</td>
-                        <td>
+                        {{-- <td>
                             @if ($item->category)
-                                {{$item->category}}
+                                {{$item->category_id}}
                             @endif
-                        </td>
+                        </td> --}}
                         <td>
                             <a class="btn btn-success" href="{{ route('admin.posts.show', $item->id) }}">SHOW</a>
                         </td>

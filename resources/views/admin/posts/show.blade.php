@@ -3,7 +3,6 @@
 @section('content')
     <div class="container my-4">
         <h1>{{ $post->title }}</h1>
-        <small>{{ $post->category }}</small>
         <h5>
             @if ($post->category)        
                 <a href="{{ route('admin.categories.show', $post->category->id) }}" class="badge badge-info">{{ $post->category->name }}</a>
