@@ -15,6 +15,15 @@
             <a class="btn btn-warning" href="{{ route('admin.posts.edit', $post->id) }}">Modifica</a>
             <a class="btn btn-secondary ml-2" href="{{ route('admin.posts.index') }}">Elenco post</a>
         </div>
+        
+        @if (count($post->tags) > 0)
+            <div class="mt-3 h4">
+                @foreach ($post->tags as $tag)
+                    <span class="badge badge-pill badge-dark">{{ $tag->name }}</span> 
+                @endforeach
+            </div>
+        @endif
+
         <div class="mt-4">{{ $post->content }}</div>
     </div>
 @endsection

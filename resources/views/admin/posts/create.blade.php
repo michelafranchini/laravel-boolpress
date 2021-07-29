@@ -35,6 +35,16 @@
                 </select>
             </div>
 
+            {{-- SCELTA DEI TAG --}}
+            <div class="form-group mb-5">
+                @foreach ($tags as $tag)
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="tags[]" id="tag-{{$tag->id}}" value="{{$tag->id}}">
+                        <label class="form-check-label" for="tag-{{ $tag->id }}">{{$tag->name}}</label>
+                    </div>
+                @endforeach
+            </div>
+
             <button type="submit" class="btn btn-primary">Crea</button>
             <a class="btn btn-secondary ml-2" href="{{ route('admin.posts.index') }}">Elenco Post</a>
         </form>

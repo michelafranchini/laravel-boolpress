@@ -15,7 +15,9 @@
                     <th>Id</th>
                     <th>Titolo</th>
                     <th>Slug</th>
-                    <th colspan="3">Azioni</th>
+                    <th>Categorie</th>
+                    <th>Tags</th>
+                    <th colspan="4">Azioni</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,11 +26,16 @@
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->slug }}</td>
-                        {{-- <td>
+                        <td>
                             @if ($item->category)
-                                {{$item->category_id}}
+                                {{$item->category->name}}
                             @endif
-                        </td> --}}
+                        </td>
+                        <td>
+                            @foreach ($item->tags as $tag)
+                                <span class="badge badge-pill badge-dark">{{ $tag->name }}</span> 
+                            @endforeach
+                        </td>
                         <td>
                             <a class="btn btn-success" href="{{ route('admin.posts.show', $item->id) }}">SHOW</a>
                         </td>
