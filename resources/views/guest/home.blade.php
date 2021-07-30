@@ -11,10 +11,7 @@
     <body>
         
         <div id="root">
-            <div class="text-center">
-                <h1>Work in progress!</h1>
-                <h2>Stiamo facendo il possibile per velocizzare la creazione, giusto un pochino di pazienza :)</h2>
-            </div>
+            
         </div>
 
         <script src="{{ asset('js/front.js') }}"></script>
