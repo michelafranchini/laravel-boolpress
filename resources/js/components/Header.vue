@@ -3,13 +3,13 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
           <ul class="d-flex list-inline">
               <li>
-                  <a href="#">Home</a>
+                  <router-link :to="{ name: 'home'}">Home</router-link>
               </li>
               <li>
-                  <a href="#">Chi Siamo</a>
+                  <router-link :to="{ name: 'about'}">Chi Siamo</router-link>
               </li>
               <li>
-                  <a href="#">Blog</a>
+                  <router-link :to="{ name: 'blog'}">Blog</router-link>
               </li>
           </ul>
       </nav>

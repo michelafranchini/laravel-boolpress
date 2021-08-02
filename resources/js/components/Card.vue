@@ -1,5 +1,5 @@
 <template>
-    <div class="col-4 my-3 d-flex">
+    <div class="col-4 my-3">
         <div class="card w-100">
             <div class="card-body">
                 <h4 class="card-title">{{ item.title }}</h4>
